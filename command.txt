@@ -8,3 +8,10 @@ pip freeze > requirement.txt
 --- if need to install all package ---
 pip install -r requirement.txt
 -----------------------------------------
+
+------------------
+starting the projects
+---------------------
+django-admin startproject contacts
+python manage.py runserver
+python .\manage.py startapp web
