@@ -1,0 +1,10 @@
+virtualenv .venv
+.\.venv\Scripts\activate
+pip install --default-timeout=200 django
+pip install --default-timeout=200 requests
+pip freeze
+pip freeze > requirement.txt
+------------------------------------------
+--- if need to install all package ---
+pip install -r requirement.txt
+-----------------------------------------
