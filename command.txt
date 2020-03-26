@@ -1,3 +1,4 @@
+/* Day 1 */
 virtualenv .venv
 .\.venv\Scripts\activate
 pip install --default-timeout=200 django
@@ -15,3 +16,57 @@ starting the projects
 django-admin startproject contacts
 python manage.py runserver
 python .\manage.py startapp web
+
+
+/* Day 2 */
+python .\manage.py check
+python .\manage.py makemigrations
+python .\manage.py makemigrations web (to migrate on web app only)
+
+python .\manage.py sqlmigrate web 0001 (to see sql that is going to be execute for migrate command where
+0001 is the sq no of 00001_initial.py in web > migrations )
+
+python .\manage.py migrate
+
+-- Playing around with model through shell
+python .\manage.py shell
+
+from web.models import Contacts
+binaya = Contacts(first_name = "Binaya", last_name = "Shakya", number= 9841203040,address = "KTM", dob = "12151990")
+binaya.first_name
+binaya.last_name
+Contacts.objects.all() (will not have any query set)
+binaya.save()
+Contacts.objects.all() (one query set) 
+Contacts.objects.values() 
+Contacts.objects.count()
+Contacts.objects.filter(first_name = "Binaya").values()
+
+for contact in Contacts.objects.all():
+    print(contact.first_name)
+
+binaya = Contacts.objects.filter(first_name = "Binaya")
+binaya.delete()
+
+---- creating super user --------------
+python .\manage.py createsuperuser (This will create super user admin so go to url 127.0.0.1:8000/admin)
+we see authorizatoin app only.
+Now to register our own app web, we need to register it in web > admin.py as 
+/*
+from .models import Contacts
+
+admin.site.register(Contacts)
+*/
+As our model name is Contacts, the admin panel shows Contactss in web app
+
+Inside this Contactss we see list of our contacts
+
+
+
+
+
+
+
+
+
+
