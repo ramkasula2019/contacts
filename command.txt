@@ -80,9 +80,22 @@ c) Now render this template object by render function as
 
 
 
+/* Day-4 */
+i) We can use render from shortcut module instead of HttpResponse as
+from django.shortcuts import render
+return render(request, "web/index.html", context)
+--- where render function takes (request object, template name, contexts) with must return keyword
+which is eqvt to HttpResponse
 
+ii) We have http404 for port related error handling
+from django. http import http404
+OR 
+for this also we have shortcut get_object_or_404 as
+from django.shortcut import get_object_or_404
 
+contact = get_object_or_404(Contacts, id = contact_id)
 
-
+iii) Here name can be used as metadata for first argument of path url
+path('contact/<int:contact_id>', views.contact_detail, name = "contact")
 
 

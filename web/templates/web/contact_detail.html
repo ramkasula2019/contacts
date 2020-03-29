@@ -1,0 +1,20 @@
+{% if  contact_dict %}
+    <table>
+        <tr>
+            <td>First_name</td>
+            <td>Last_name</td>
+            <td>Address</td>
+            <td>DOB</td>
+            <td>Number</td>
+        </tr>
+        <tr>
+            <td>{{contact_dict.first_name}}</td>
+            <td>{{contact_dict.last_name}}</td>
+            <td>{{contact_dict.address}}</td>
+            <td>{{contact_dict.dob}}</td>
+            <td>{{contact_dict.number}}</td>
+        </tr>
+    </table>
+{% else %}    
+    <p> No contact founds right now</p>
+{% endif %}
