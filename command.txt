@@ -61,6 +61,22 @@ As our model name is Contacts, the admin panel shows Contactss in web app
 
 Inside this Contactss we see list of our contacts
 
+/* Day-3 */
+url is list that map the request to the view
+null = True means db can hold null value
+contactnumber.objects.get(id = 1) to filter by id = 1
+
+sometime we need to delete all file inside misgration folder to detect makemigrations
+Refer python manage.py flush
+
+i) Create concept of foreign key
+ii) Create templates which should be inside (app>templates>app>index.html)
+iii) This template should be load in views for that
+a) first import template loader
+from django.template import loader
+b) Now create template object as template = loader.get_template(with index.html path)
+c) Now render this template object by render function as
+        return HttpResponse(template.render(context, request)) where context should always be dictionary
 
 
 
