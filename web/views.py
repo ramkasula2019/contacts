@@ -1,5 +1,5 @@
 #from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from web.models import Contacts
 from django.template import loader
 from django.http import Http404
@@ -23,19 +23,6 @@ def home(request):
 def contact_detail(request, contact_id):
     """ for rendering individual contact page based on contact_id 
     """
-    try:
-        contact = Contacts.objects.get(id = contact_id)
-        print(contact)
-    except Contacts.DoesNotExist:
-        raise Http404 ("Contact page not found")
+    contact = get_object_or_404(Contacts, id = contact_id)
+    return render(request, "web/contact_detail.html", {'contact' : contact} )
 
-    contact_dict  = {
-        'first_name' : contact.first_name,
-        'last_name' : contact.last_name,
-        'address' : contact.address,
-        'dob' : contact.dob,
-        #'number' : [contact_number.number for contact_number in ContactNumber.objects.filter(id= contact_id)]
-        'number' :  [contact_number.number for contact_number in contact.contactnumber_set.all()]
-
-        }
-    return render(request, "web/contact_detail.html", {'contact_dict':contact_dict})

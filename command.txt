@@ -103,4 +103,11 @@ path('contact/<int:contact_id>', views.contact_detail, name = "contact")
 i) switch to master branch and git pull
 ii)  git checkout -b day-5/css_related (checkout)
 iii) git push --set-upstream origin day-5/css_related (pushing)
-
+A) Function Based view
+    Defined function which has request object as parameter or argument
+B) Class Based view 
+    Class view 
+        View - where we can do (get, post, delete, put)
+    generic View:    
+        ListView (Models.objects.all())
+        DetailView (Models.objects.get(key = value)) 

@@ -1,4 +1,4 @@
-{% if  contact_dict %}
+{% if  contact %}
     <table>
         <tr>
             <td>First_name</td>
@@ -8,11 +8,15 @@
             <td>Number</td>
         </tr>
         <tr>
-            <td>{{contact_dict.first_name}}</td>
-            <td>{{contact_dict.last_name}}</td>
-            <td>{{contact_dict.address}}</td>
-            <td>{{contact_dict.dob}}</td>
-            <td>{{contact_dict.number}}</td>
+            <td>{{contact.first_name}}</td>
+            <td>{{contact.last_name}}</td>
+            <td>{{contact.address}}</td>
+            <td>{{contact.dob}}</td>
+            <td>
+                {% for contact_number in contact.contactnumber_set.all %}
+                    {{contact_number.number}}
+                {% endfor %}
+            </td>
         </tr>
     </table>
 {% else %}    
