@@ -111,3 +111,4 @@ B) Class Based view
     generic View:    
         ListView (Models.objects.all())
         DetailView (Models.objects.get(key = value)) 
+List view / Detail view takes (model , template_name, cotext_object_name)
