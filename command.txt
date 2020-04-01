@@ -13,7 +13,7 @@ pip install -r requirement.txt
 ------------------
 starting the projects
 ---------------------
-django-admin startproject contacts
+django-admin startprojegit t contacts
 python manage.py runserver
 python .\manage.py startapp web
 
@@ -98,4 +98,9 @@ contact = get_object_or_404(Contacts, id = contact_id)
 iii) Here name can be used as metadata for first argument of path url
 path('contact/<int:contact_id>', views.contact_detail, name = "contact")
 
+
+/* Day-5 */
+i) switch to master branch and git pull
+ii)  git checkout -b day-5/css_related (checkout)
+iii) git push --set-upstream origin day-5/css_related (pushing)
 
