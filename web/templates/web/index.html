@@ -1,9 +1,35 @@
-{% if contacts  %}
-<ul>
-    {% for contact in contacts %}
-    <li><a href="{% url 'contact' contact.id %}">{{ contact.first_name }}</a></li>
-    {% endfor %}
-</ul>
-{% else %}
-<p>No contacts found</p>
-{% endif %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel ="stylesheet", type="text/css", href="{% static 'web/style.css' %}" >
+</head>
+
+<body>
+    <header class="header">
+        <h1 class = logo > Contacts </h1>
+    </header>
+    <main class="main">
+        <div class = contacts>
+            {% if contacts  %}
+            <ul>
+                {% for contact in contacts %}
+                <li><a href="{% url 'contact' contact.id %}">{{ contact.first_name }}</a></li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <p>No contacts found</p>
+            {% endif %}
+        </div>
+    </main>
+    <footer class="footer">
+        <p class="footer_note">Contacts application for Python Bootcamp </p>
+    </footer>
+
+</body>
+
+</html>

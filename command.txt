@@ -112,3 +112,14 @@ B) Class Based view
         ListView (Models.objects.all())
         DetailView (Models.objects.get(key = value)) 
 List view / Detail view takes (model , template_name, cotext_object_name)
+
+iv) HEADER
+        METADATA (TITEL, VIEWPORT)
+        SCRIPTS (STYLE, JAVASCRIPTS)
+    BODY
+        HEADER (LOGO)
+        MAIN (CONTACTS)
+        FOOTER (NOTES)
+
+v) load css files (make folder as web/static/web/style.css)
+vi) import css static file in index.html as {% load static %} and import by link
