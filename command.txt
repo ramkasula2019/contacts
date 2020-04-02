@@ -13,7 +13,7 @@ pip install -r requirement.txt
 ------------------
 starting the projects
 ---------------------
-django-admin startproject contacts
+django-admin startprojegit t contacts
 python manage.py runserver
 python .\manage.py startapp web
 
@@ -99,3 +99,27 @@ iii) Here name can be used as metadata for first argument of path url
 path('contact/<int:contact_id>', views.contact_detail, name = "contact")
 
 
+/* Day-5 */
+i) switch to master branch and git pull
+ii)  git checkout -b day-5/css_related (checkout)
+iii) git push --set-upstream origin day-5/css_related (pushing)
+A) Function Based view
+    Defined function which has request object as parameter or argument
+B) Class Based view 
+    Class view 
+        View - where we can do (get, post, delete, put)
+    generic View:    
+        ListView (Models.objects.all())
+        DetailView (Models.objects.get(key = value)) 
+List view / Detail view takes (model , template_name, cotext_object_name)
+
+iv) HEADER
+        METADATA (TITEL, VIEWPORT)
+        SCRIPTS (STYLE, JAVASCRIPTS)
+    BODY
+        HEADER (LOGO)
+        MAIN (CONTACTS)
+        FOOTER (NOTES)
+
+v) load css files (make folder as web/static/web/style.css)
+vi) import css static file in index.html as {% load static %} and import by link

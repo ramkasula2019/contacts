@@ -1,0 +1,41 @@
+*{
+    padding : 0;
+    margin : 0
+}
+.body{
+    max-width: 80vw;
+    height: 50vh;
+    margin: 0 auto;
+}
+
+/* header style */
+.header{
+    padding : 10px;
+    height : 100px
+}
+/* logo style */
+.logo{
+    color : green;
+    width : 150px;
+    margin : auto;
+    text-align: center
+}
+/* main style */
+.main{
+    padding : 10px, 10x;
+    margin: 10px, 10px;
+    min-width: 60vh
+}
+/*contact sytle*/
+.contact{
+    padding: 10px;
+    margin: 10px
+}
+/*footer style */
+.footer{
+    height: 10px;
+}
+.footer_note{
+    margin: auto;
+    text-align: center;
+}
