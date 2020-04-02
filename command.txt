@@ -123,3 +123,11 @@ iv) HEADER
 
 v) load css files (make folder as web/static/web/style.css)
 vi) import css static file in index.html as {% load static %} and import by link
+
+
+/* Day - 6 *
+i) After PR is merged to master, we need to checkout master branch by "git checkout master"
+ii) we see this master branch is still behind by some commit as it is locally not upate so use "git pull"
+iii) Another branch created for day 6 by "git checkout -b day-6/template_engine"
+iv) we switch to this branch locally now pushed it to our git repo by "git push --set-upstream origin day-6/template_engine" 
+    now we can see this branch in git repo
