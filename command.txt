@@ -131,3 +131,12 @@ ii) we see this master branch is still behind by some commit as it is locally no
 iii) Another branch created for day 6 by "git checkout -b day-6/template_engine"
 iv) we switch to this branch locally now pushed it to our git repo by "git push --set-upstream origin day-6/template_engine" 
     now we can see this branch in git repo
+
+Command.txt was modified
+i) git add .\command.txt 
+ii) git commit -m "command updated"
+iii) git push
+
+Block content for template extension
+{% extends 'web/base.html'}
+

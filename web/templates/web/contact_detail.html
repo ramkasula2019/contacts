@@ -1,3 +1,7 @@
+
+{% extends 'web/index.html' %}
+
+{% block content %}
 {% if  contact %}
     <table>
         <tr>
@@ -22,3 +26,4 @@
 {% else %}    
     <p> No contact founds right now</p>
 {% endif %}
+{% endblock %}
