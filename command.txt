@@ -140,3 +140,5 @@ iii) git push
 Block content for template extension
 {% extends 'web/base.html'}
 
+Define ManyToMany relationsship in model class 
+some overview on bootstrap/CDN/fontawesome
